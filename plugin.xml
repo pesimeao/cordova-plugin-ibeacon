@@ -114,7 +114,7 @@
 
             <receiver android:name="com.unarin.cordova.beacon.BeaconNotificationReceiver">
           <intent-filter>
-              <action android:name="com.example.andrepinto.NOTIFY_FOR_BEACON" />
+              <action android:name="com.tlantic.customer.demo.NOTIFY_FOR_BEACON" />
           </intent-filter>
       </receiver>
 
@@ -124,6 +124,9 @@
         <source-file src="src/android/IBeaconServiceNotifier.java" target-dir="src/com/unarin/cordova/beacon" />
         <source-file src="src/android/ILocationManagerCommand.java" target-dir="src/com/unarin/cordova/beacon" />
         <source-file src="src/android/PausableThreadPoolExecutor.java" target-dir="src/com/unarin/cordova/beacon" />
+        
+        <source-file src="src/android/BackgroundBeaconService.java" target-dir="src/com/unarin/cordova/beacon" />
+        <source-file src="src/android/BeaconNotificationReceiver.java" target-dir="src/com/unarin/cordova/beacon" />
 
 		<source-file src="libs/android/altbeacon.jar" target-dir="libs" framework="true" />
     </platform>
