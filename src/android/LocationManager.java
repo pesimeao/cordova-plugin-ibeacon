@@ -100,8 +100,12 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
         
         debugEnabled = true;
 
-				Intent startServiceIntent = new Intent(this.getApplicationContext(), BackgroundBeaconService.class);
-				this.getApplicationContext().startService(startServiceIntent);
+		// Install service
+		Intent startServiceIntent = new Intent(this.getApplicationContext(), BackgroundBeaconService.class);
+		this.getApplicationContext().startService(startServiceIntent);
+
+		// Set something...
+		iBeaconManager.setBackgroundBetweenScanPeriod(1000L);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
         	initBluetoothAdapter();
